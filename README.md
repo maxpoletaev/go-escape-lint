@@ -28,13 +28,13 @@ To extract useful information from the compiler, you need to provide some additi
 The following flags enable escape analysis output, inlining information, and hints about bounds checks:
 
 ```
-go build -gcflags="-m -d=ssa/check_bce" -o myapp 2>&1 | tee compiler-output.txt
+go build -gcflags="-m -d=ssa/check_bce" -o myapp 2>&1 | tee build.log
 ```
 
 Then you can run the linter tool on the output:
 
 ```
-goescapelint -f compiler-output.txt
+go-escape-lint -f build.log
 ```
 
 The result will show a list of places violating the annotations, if any:
