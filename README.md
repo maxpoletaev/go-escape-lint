@@ -94,7 +94,7 @@ func main() {
 }
 ```
 
-### `//no-bound-check`
+### `//no-bounds-check`
 
 Applied to lines of code that access arrays or slices by index. 
 The linter will produce a warning if the compiler inserts bounds checks for the access.
