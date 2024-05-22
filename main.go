@@ -263,7 +263,7 @@ func CompareResults(
 				}
 			case MustInline:
 				if !slices.Contains(hints, Inlined) {
-					log.Printf("vunction at %s:%d is marked as %s but is not inlined", pos.File, pos.Line, ann)
+					log.Printf("function at %s:%d is marked as %s but is not inlined", pos.File, pos.Line, ann)
 					valid = false
 				}
 			}
